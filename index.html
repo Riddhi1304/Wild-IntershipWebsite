@@ -8,35 +8,53 @@
   <script src="https://kit.fontawesome.com/a2e0e6ad77.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Sara <span>Hashemi Nasab</span></div>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="#">Education</a>
-      <a href="#">Passion</a>
-      <a href="#">Business</a>
-      <a href="contact.html">Contact</a>
-
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Academics <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Degrees</a></li>
+            <li><a href="#">Non-degrees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Businesses <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Leadership</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Arts <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Drawings</a></li>
+            <li><a href="#">Dance</a></li>
+            <li><a href="#">Fashion</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Hi, I'm <span>Sara Hashemi Nasab</span></h1>
-      <p class="subtitle">✨ Natural Skincare Specialist • Leadership Educator • Wellness Advocate ✨</p>
+      <h1>Hello, I'm <span>Sara Hashemi Nasab</span></h1>
+      <p class="subtitle">✨ Skincare Specialist • Leadership Educator • Wellness Advocate ✨</p>
       <p class="desc">
-        Passionate about harnessing nature's gifts for radiant skin and empowering leaders through educational intelligence. I believe in creating beauty from within and inspiring growth through transformative experiences.
+        I create natural skincare solutions and empower individuals to lead with confidence and wellness. Combining science, nature, and education for a radiant life.
       </p>
       <div class="buttons">
-        <a href="#" class="btn primary">Explore My Work →</a>
-        <a href="#" class="btn secondary">Let's Connect</a>
+        <a href="contact.html" class="btn primary">Let's Connect</a>
+        <a href="https://www.wnpe.com/skincare" class="btn secondary" target="_blank">Skincare →</a>
       </div>
       <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         <a href="#"><i class="fa-solid fa-envelope"></i></a>
       </div>
