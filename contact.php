@@ -2,16 +2,15 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name    = htmlspecialchars($_POST['name']);
     $email   = htmlspecialchars($_POST['email']);
+    $contact = htmlspecialchars($_POST['contact']);
     $message = htmlspecialchars($_POST['message']);
 
-    // === Send email (optional) ===
-    $to      = "your-email@example.com";   // change to your email
-    $subject = "New message from $name via Wild Contact Form";
-    $body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $to      = "your-email@example.com"; // Replace with your email
+    $subject = "New message from $name via Contact Form";
+    $body    = "Name: $name\nEmail: $email\nContact: $contact\n\nMessage:\n$message";
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
-    // mail() returns true on success (requires hosting with mail configured)
-    if (mail($to, $subject, $body, $headers)) {
+    if(mail($to, $subject, $body, $headers)){
         echo "success";
     } else {
         echo "error";
