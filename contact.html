@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Wild</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sara Hashemi Nasab</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">Wild<span></span></div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html" class="active">Contact</a>
+    <div class="logo">Sara <span>Hashemi Nasab</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#">Academics <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Degrees</a></li>
+            <li><a href="#">Non-degrees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Businesses <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Emotional Intelligence</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Teams <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">2023-2024</a></li>
+            <li><a href="#">2025-2026</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Arts <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Drawings</a></li>
+            <li><a href="#">Dance</a></li>
+            <li><a href="#">Literatures</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Etc.</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Contact Section -->
   <section class="contact">
     <h1>Get in Touch</h1>
-    <p>Have questions about our skincare line? Send us a message below.</p>
-
+    <p>Send me a message or ask questions about my work.</p>
     <form id="contactForm" action="contact.php" method="POST">
-  <label for="name">Full Name</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email Address</label>
-  <input type="email" id="email" name="email" required>
-
-   <label for="email">Contact No.</label>
-  <input type="contact" id="contact" name="contact" required>
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-
-  <button type="submit">Send Message</button>
-</form>
-<div id="responseMessage"></div>
-
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+      <label for="contact">Contact No.</label>
+      <input type="text" id="contact" name="contact" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="responseMessage"></div>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
   </section>
-
-  <!-- Footer -->
-<footer>
-  <p>&copy; 2025 Wild Skincare. Formulated with care. All rights reserved.</p>
-</footer>
 
   <script src="script.js"></script>
 </body>
