@@ -8,29 +8,52 @@
   <script src="https://kit.fontawesome.com/a2e0e6ad77.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Sara <span>Hashemi Nasab</span></div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="#">Education</a>
-      <a href="#">Passion</a>
-      <a href="#">Business</a>
-      <a href="#">Contact</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li class="dropdown">
+          <a href="#">Academics <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Degrees</a></li>
+            <li><a href="#">Non-degrees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Businesses <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Leadership</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Arts <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Drawings</a></li>
+            <li><a href="#">Dance</a></li>
+            <li><a href="#">Fashion</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
+  <!-- About Section -->
   <section class="about">
     <h1>About Me</h1>
-    <p class="tagline">Passionate about creating digital experiences that inspire and bring joy to people's lives</p>
+    <p class="tagline">Passionate about skincare, leadership, and creating a positive impact.</p>
 
     <div class="about-container">
       <div class="about-text">
         <p>
-          With a heart for creativity and an eye for detail, I've spent years crafting digital experiences that resonate with people. My journey is guided by the belief that design should not just be beautiful, but meaningful and uplifting.
+          I combine science, nature, and education to craft natural skincare solutions that empower individuals. With a focus on wellness and leadership, I strive to inspire confidence, beauty, and balance from within.
         </p>
         <p>
-          Every project I undertake is an opportunity to create something that makes someone smile, to solve a problem elegantly, or to inspire others. I believe in the power of thoughtful design to transform ordinary moments into extraordinary experiences.
+          Each project or program I undertake is guided by a philosophy of thoughtful design, quality, and meaningful impact.
         </p>
 
         <div class="stats">
@@ -50,7 +73,7 @@
       </div>
 
       <div class="about-img">
-        <img src="https://picsum.photos/400/500?grayscale" alt="Creative Light Image" />
+        <img src="https://picsum.photos/400/500?grayscale" alt="Sara Hashemi Nasab">
       </div>
     </div>
   </section>
