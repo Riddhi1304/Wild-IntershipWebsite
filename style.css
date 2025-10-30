@@ -33,29 +33,47 @@ body {
   box-shadow: 0 4px 20px rgba(180, 108, 255, 0.1);
 }
 
+/* Logo styling (left side) */
 .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   color: #e0b0ff;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(184, 107, 255, 0.5);
+  cursor: default;
 }
 
 .logo span {
   color: #b86bff;
+  font-weight: 800;
 }
 
+/* Nav links on right side */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+/* ====== Navbar Links (white text like contact page) ====== */
 nav a {
-  color: #ddd;
+  color: #fff; /* white links */
   text-decoration: none;
   margin: 0 14px;
   font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   transition: 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-  color: #caa6ff;
+  color: #caa6ff; /* soft purple hover */
   text-shadow: 0 0 10px #b86bff;
 }
+
+
 
 /* ====== Hero Section ====== */
 .hero {
@@ -245,3 +263,116 @@ nav a.active {
     display: block;
   }
 }
+ 
+/* ====== Contact Section ====== */
+.contact {
+  padding: 9rem 10% 5rem;
+  background: radial-gradient(circle at top, #0a0018, #000);
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  color: #d2a8ff;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  color: #aaa;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cfcfcf;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #5b21b6;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #b86bff;
+  box-shadow: 0 0 15px rgba(184, 107, 255, 0.3);
+}
+
+button {
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+}
+
+#responseMessage {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* ====== Contact Background Aura (assertive) ====== */
+.contact {
+  position: relative;          /* required for abs children */
+  overflow: hidden;            /* clip glow edges */
+}
+
+.contact::before,
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 70vmax;
+  height: 70vmax;
+  filter: blur(90px);
+  opacity: 0.55;               /* bumped so you can see it */
+  z-index: 0;                  /* behind form */
+  pointer-events: none;
+}
+
+.contact::before {
+  top: -25vmax;
+  left: -15vmax;
+  background: radial-gradient(circle at 30% 50%, #b86bff 0%, transparent 60%);
+  animation: floatA 12s ease-in-out infinite alternate;
+}
+
+.contact::after {
+  bottom: -30vmax;
+  right: -15vmax;
+  background: radial-gradient(circle at 70% 50%, #6366f1 0%, transparent 60%);
+  animation: floatB 14s ease-in-out infinite alternate;
+}
+
+@keyframes floatA { from { transform: translate(0,0) } to { transform: translate(8%,6%) } }
+@keyframes floatB { from { transform: translate(0,0) } to { transform: translate(-8%,-5%) } }
+
+/* keep content above the glow */
+.contact > * { position: relative; z-index: 1; }
+
